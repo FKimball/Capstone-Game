@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://lmq3sa2lp6de"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_okdw8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6ap4l"]
+radius = 0.6
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0247442, 0.0198963, 0)
+script = ExtResource("1_okdw8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0157158)
+shape = SubResource("SphereShape3D_6ap4l")
+
+[node name="Item" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0247442, 0.0198963, 0)
+radial_segments = 22
+rings = 28

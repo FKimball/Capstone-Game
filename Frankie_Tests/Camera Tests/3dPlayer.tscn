@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyt3j5ntkumvd"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_eib4h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rwkls"]
+radius = 0.50783
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_eib4h")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.877322, 0, 0.479902, 0, 1, 0, -0.479902, 0, 0.877322, 0, 0, 0)
+radius = 0.375242
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGSphere3D"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.138891, -0.169548, 0.0214993)
+radius = 0.295552
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGSphere3D"]
+transform = Transform3D(0.344001, 0, -0.362856, 0, 1, 0, 0.362856, 0, 0.344001, 0.0688085, -0.174445, 0.110302)
+radius = 0.295552
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.999868, 0.00214648, 0.0160912, -0.00214675, 0.999998, 0, -0.0160912, -3.45439e-05, 0.999871, 0, 0, 0)
+shape = SubResource("SphereShape3D_rwkls")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+spring_length = 5.0
+margin = 0.1
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
