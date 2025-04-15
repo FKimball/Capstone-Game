@@ -6,6 +6,6 @@ func _ready():
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: Node) -> void:
-	if body.name == "Player":  # Adjust name/tag as needed
+	if body.name == "Player": 
 		print("Picked up:", item_name)
-		queue_free()  # Removes the item from the scene
+		queue_free()

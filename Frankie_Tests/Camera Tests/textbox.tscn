@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rh83vqrmav5"]
+
+[ext_resource type="Script" path="res://textbox.gd" id="1_2l0vw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_80unh"]
+
+[node name="textbox" type="CanvasLayer"]
+script = ExtResource("1_2l0vw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+texture_filter = 1
+offset_right = 331.0
+offset_bottom = 79.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 2
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 331.0
+offset_bottom = 78.0
+text = "Test the quick brown box jumped over the sly dog"
+label_settings = SubResource("LabelSettings_80unh")
+autowrap_mode = 2
