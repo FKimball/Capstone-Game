@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://5gv8v04hl4oe"]
+[gd_scene load_steps=6 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
 [ext_resource type="PackedScene" uid="uid://dsjpcn08raqtk" path="res://npc.tscn" id="2_gywbc"]
+[ext_resource type="PackedScene" uid="uid://xm4pqyq2k51s" path="res://Fantasy_Free/assets/models_fbx/box_001.fbx" id="4_mpefc"]
+[ext_resource type="PackedScene" uid="uid://d0qdslovi1xcb" path="res://Fantasy_Free/assets/models_fbx/bag_001.fbx" id="5_5tptm"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -75,3 +77,9 @@ size = Vector3(1, 0.429565, 1.50623)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94842, 2.30728, 2.87092)
 use_collision = true
 size = Vector3(1, 0.429565, 1.50623)
+
+[node name="box_001" parent="." instance=ExtResource("4_mpefc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23144, 6.27524, 5.46082)
+
+[node name="bag_001" parent="." instance=ExtResource("5_5tptm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.49313, 1.89562, 6.81323)
