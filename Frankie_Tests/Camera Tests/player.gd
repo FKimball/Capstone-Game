@@ -12,10 +12,9 @@ var saturation_level = 0.0
 var max_saturation = 1.0
 
 func _ready():
-	world.environment.adjustment_saturation = saturation_level  # Initialize saturation level
-	# Connect the quest_completed signal to the _on_quest_completed method
-	var item = get_node("../Gem")  # Replace with the correct path to your item instance
-	item.connect("quest_completed", Callable(self, "_on_quest_completed"))
+	world.environment.adjustment_saturation = saturation_level  
+	#var item = get_node("../Gem")
+	#item.connect("quest_completed", Callable(self, "_on_quest_completed"))
 
 func _physics_process(delta: float) -> void:
 	# Add gravity to the character if it's not on the floor.
@@ -60,5 +59,5 @@ func _unhandled_input(event):
 		
 func _on_quest_completed():
 	# Increase saturation, but cap it at the maximum value (1.0)
-	saturation_level = clamp(saturation_level + 0.8, 0.0, max_saturation)
+	saturation_level = clamp(saturation_level + 0.2, 0.0, max_saturation)
 	world.environment.adjustment_saturation = saturation_level

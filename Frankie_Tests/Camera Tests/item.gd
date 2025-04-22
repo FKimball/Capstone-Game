@@ -1,6 +1,7 @@
 extends Area3D
 
-@export var item_name: String = "Gem"
+class_name Item
+@export var item_name: String
 signal item_collected
 signal quest_completed
 

@@ -1,18 +1,47 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://5gv8v04hl4oe"]
+=======
+[gd_scene load_steps=7 format=3 uid="uid://5gv8v04hl4oe"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
 [ext_resource type="PackedScene" uid="uid://dsjpcn08raqtk" path="res://npc.tscn" id="2_gywbc"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://xm4pqyq2k51s" path="res://Fantasy_Free/assets/models_fbx/box_001.fbx" id="4_mpefc"]
 [ext_resource type="PackedScene" uid="uid://d0qdslovi1xcb" path="res://Fantasy_Free/assets/models_fbx/bag_001.fbx" id="5_5tptm"]
+=======
+[ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
+
+[sub_resource type="Resource" id="Resource_khu1u"]
+script = ExtResource("3_w686m")
+normals_dialgoue = Array[String](["You helped my brother! for helping my friend!", "Now you gotta help me", "Can you find my lost stone?"])
+quest_complete_dialogue = Array[String](["Nice job!", "I think my brother need your help..."])
+
+[sub_resource type="Resource" id="Resource_4chqf"]
+script = ExtResource("3_w686m")
+normals_dialgoue = Array[String](["Thanks for helping my brothers!", "Now you have to find my lost coin"])
+quest_complete_dialogue = Array[String](["Thank you so much for helping us", "You brought the color back!"])
+>>>>>>> Stashed changes
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_f0b52")]
 transform = Transform3D(-0.999657, 0, 0.026177, 0, 1, 0, -0.026177, 0, -0.999657, -0.793765, 0.496421, -2.66181)
 
-[node name="NPC" parent="." instance=ExtResource("2_gywbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16816, 0.00918388, 0)
+[node name="NPC" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806032, -0.162441, 0)
+quest_item = NodePath("../Gem")
+
+[node name="NPC2" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.50359, -0.162441, 3.36889)
+quest_item = NodePath("../Stone")
+dialogue = SubResource("Resource_khu1u")
+
+[node name="NPC3" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00175, -0.162441, -8.05158)
+quest_item = NodePath("../Coin")
+dialogue = SubResource("Resource_4chqf")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.788172, -0.802104, -0.407353)
@@ -25,6 +54,15 @@ light_color = Color(0.968627, 0.784314, 0.490196, 1)
 
 [node name="Gem" parent="." instance=ExtResource("2_2yveb")]
 transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, 1.9763, 2.94636, 2.89479)
+item_name = "Gem"
+
+[node name="Stone" parent="." instance=ExtResource("2_2yveb")]
+transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, -7.88401, -0.205821, 8.64596)
+item_name = "Stone"
+
+[node name="Coin" parent="." instance=ExtResource("2_2yveb")]
+transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, -13.0596, -0.205821, -0.85676)
+item_name = "Coin"
 
 [node name="Tree" type="CSGCylinder3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.2, -2.38419e-07, 0.531873, 3.05067)
