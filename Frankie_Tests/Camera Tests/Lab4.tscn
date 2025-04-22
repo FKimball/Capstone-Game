@@ -1,24 +1,11 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene load_steps=6 format=3 uid="uid://5gv8v04hl4oe"]
-=======
-[gd_scene load_steps=7 format=3 uid="uid://5gv8v04hl4oe"]
->>>>>>> Stashed changes
-=======
-[gd_scene load_steps=7 format=3 uid="uid://5gv8v04hl4oe"]
->>>>>>> Stashed changes
+[gd_scene load_steps=9 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
 [ext_resource type="PackedScene" uid="uid://dsjpcn08raqtk" path="res://npc.tscn" id="2_gywbc"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+[ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
 [ext_resource type="PackedScene" uid="uid://xm4pqyq2k51s" path="res://Fantasy_Free/assets/models_fbx/box_001.fbx" id="4_mpefc"]
 [ext_resource type="PackedScene" uid="uid://d0qdslovi1xcb" path="res://Fantasy_Free/assets/models_fbx/bag_001.fbx" id="5_5tptm"]
-=======
-=======
->>>>>>> Stashed changes
-[ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
 
 [sub_resource type="Resource" id="Resource_khu1u"]
 script = ExtResource("3_w686m")
@@ -29,10 +16,6 @@ quest_complete_dialogue = Array[String](["Nice job!", "I think my brother need y
 script = ExtResource("3_w686m")
 normals_dialgoue = Array[String](["Thanks for helping my brothers!", "Now you have to find my lost coin"])
 quest_complete_dialogue = Array[String](["Thank you so much for helping us", "You brought the color back!"])
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 [node name="Node3D" type="Node3D"]
 
