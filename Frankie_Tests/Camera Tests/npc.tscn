@@ -1,6 +1,20 @@
-[gd_scene format=3 uid="uid://dsjpcn08raqtk"]
+[gd_scene load_steps=5 format=3 uid="uid://dsjpcn08raqtk"]
+
+[ext_resource type="Script" path="res://npc.gd" id="1_r2gkd"]
+[ext_resource type="Script" path="res://dialogue.gd" id="2_hai5m"]
+
+[sub_resource type="Resource" id="Resource_4sg5k"]
+script = ExtResource("2_hai5m")
+normals_dialgoue = Array[String](["Hello there!", "Can you help me?", "I need that gem over there!"])
+quest_complete_dialogue = Array[String](["Thank you so much!", "You saved me!"])
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7x1bi"]
+radius = 0.391054
+height = 1.00781
 
 [node name="NPC" type="Node3D"]
+script = ExtResource("1_r2gkd")
+dialogue = SubResource("Resource_4sg5k")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(0.877322, 0, 0.479902, 0, 1, 0, -0.479902, 0, 0.877322, 0, 0, 0)
@@ -14,3 +28,20 @@ radius = 0.295552
 [node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGSphere3D"]
 transform = Transform3D(0.344001, 0, -0.362856, 0, 1, 0, 0.362856, 0, 0.344001, 0.0688085, -0.174445, 0.110302)
 radius = 0.295552
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+offset_left = 457.0
+offset_top = 233.0
+offset_right = 561.0
+offset_bottom = 325.0
+
+[node name="Label" type="Label" parent="DialogueBox"]
+layout_mode = 2
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_7x1bi")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

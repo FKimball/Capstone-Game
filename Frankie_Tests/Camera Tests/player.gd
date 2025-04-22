@@ -1,11 +1,21 @@
 extends CharacterBody3D
 
+@onready var world = $SpringArm3D/Camera3D/WorldEnvironment
 @onready var spring_arm = $SpringArm3D
 @export var mouse_sensitivity = 0.0015
 @export var rotation_speed = 12.0
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
+
+var saturation_level = 0.0
+var max_saturation = 1.0
+
+func _ready():
+	world.environment.adjustment_saturation = saturation_level  # Initialize saturation level
+	# Connect the quest_completed signal to the _on_quest_completed method
+	var item = get_node("../Gem")  # Replace with the correct path to your item instance
+	item.connect("quest_completed", Callable(self, "_on_quest_completed"))
 
 func _physics_process(delta: float) -> void:
 	# Add gravity to the character if it's not on the floor.
@@ -47,3 +57,8 @@ func _unhandled_input(event):
 		# This ensures the character always faces the camera's direction of movement.
 		var yaw = spring_arm.rotation.y
 		rotation = Vector3(0, yaw, 0)
+		
+func _on_quest_completed():
+	# Increase saturation, but cap it at the maximum value (1.0)
+	saturation_level = clamp(saturation_level + 0.8, 0.0, max_saturation)
+	world.environment.adjustment_saturation = saturation_level
