@@ -59,5 +59,5 @@ func _unhandled_input(event):
 		
 func _on_quest_completed():
 	# Increase saturation, but cap it at the maximum value (1.0)
-	saturation_level = clamp(saturation_level + 0.2, 0.0, max_saturation)
+	saturation_level = clamp(saturation_level + 0.28, 0.0, max_saturation)
 	world.environment.adjustment_saturation = saturation_level

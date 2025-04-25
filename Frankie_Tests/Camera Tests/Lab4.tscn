@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5gv8v04hl4oe"]
+[gd_scene load_steps=12 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
@@ -6,11 +6,14 @@
 [ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
 [ext_resource type="PackedScene" uid="uid://xm4pqyq2k51s" path="res://Fantasy_Free/assets/models_fbx/box_001.fbx" id="4_mpefc"]
 [ext_resource type="PackedScene" uid="uid://d0qdslovi1xcb" path="res://Fantasy_Free/assets/models_fbx/bag_001.fbx" id="5_5tptm"]
+[ext_resource type="Script" path="res://csg_cylinder_3d.gd" id="7_ft5ry"]
+[ext_resource type="PackedScene" uid="uid://bl08kl586iut4" path="res://Fantasy_Free/nodes/holder_001.tscn" id="8_g1d2r"]
+[ext_resource type="PackedScene" uid="uid://pkbnx6nvoro2" path="res://Fantasy_Free/nodes/house_001.tscn" id="9_kl7n3"]
 
 [sub_resource type="Resource" id="Resource_khu1u"]
 script = ExtResource("3_w686m")
 normals_dialgoue = Array[String](["You helped my brother! for helping my friend!", "Now you gotta help me", "Can you find my lost stone?"])
-quest_complete_dialogue = Array[String](["Nice job!", "I think my brother need your help..."])
+quest_complete_dialogue = Array[String](["Nice job!", "I think my brother needs your help..."])
 
 [sub_resource type="Resource" id="Resource_4chqf"]
 script = ExtResource("3_w686m")
@@ -27,7 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.806032, -0.162441, 0)
 quest_item = NodePath("../Gem")
 
 [node name="NPC2" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.50359, -0.162441, 3.36889)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.53182, -0.162942, 3.36721)
 quest_item = NodePath("../Stone")
 dialogue = SubResource("Resource_khu1u")
 
@@ -43,7 +46,6 @@ size = Vector3(47.1144, 0.420898, 27.922)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.292272, 0.956335, 0, -0.956335, 0.292272, -2.25159, 7.60746, 2.19677)
-light_color = Color(0.968627, 0.784314, 0.490196, 1)
 
 [node name="Gem" parent="." instance=ExtResource("2_2yveb")]
 transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, 1.9763, 2.94636, 2.89479)
@@ -114,3 +116,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.23144, 6.27524, 5.46082)
 
 [node name="bag_001" parent="." instance=ExtResource("5_5tptm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.49313, 1.89562, 6.81323)
+
+[node name="gate" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.21485, 0, -1.77918)
+use_collision = true
+radius = 1.26297
+height = 3.27628
+script = ExtResource("7_ft5ry")
+
+[node name="holder_001" parent="." instance=ExtResource("8_g1d2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406009, -0.591655, -5.54814)
+
+[node name="house_001" parent="." instance=ExtResource("9_kl7n3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6271, -0.591655, -8.40508)
