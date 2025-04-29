@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bvea0bsr28d1p"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 15.0
+offset_top = 11.0
+offset_right = 873.0
+offset_bottom = 384.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 23.0
+
+[node name="StartGameButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="TutorialButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
