@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://5gv8v04hl4oe"]
+[gd_scene load_steps=22 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
@@ -9,6 +9,16 @@
 [ext_resource type="Script" path="res://csg_cylinder_3d.gd" id="7_ft5ry"]
 [ext_resource type="PackedScene" uid="uid://bl08kl586iut4" path="res://Fantasy_Free/nodes/holder_001.tscn" id="8_g1d2r"]
 [ext_resource type="PackedScene" uid="uid://pkbnx6nvoro2" path="res://Fantasy_Free/nodes/house_001.tscn" id="9_kl7n3"]
+[ext_resource type="PackedScene" uid="uid://ctcxs4bq2ah5u" path="res://Fantasy_Free/assets/models_fbx/fabulous_mushroom_001.fbx" id="10_033jh"]
+[ext_resource type="PackedScene" uid="uid://byej6nglsuu2v" path="res://Fantasy_Free/assets/models_fbx/holder_001.fbx" id="11_drhwa"]
+[ext_resource type="PackedScene" uid="uid://cwruutbkqyvm4" path="res://Fantasy_Free/assets/models_fbx/jug_003.fbx" id="12_wojtu"]
+[ext_resource type="PackedScene" uid="uid://bo3swfvhoc078" path="res://Fantasy_Free/assets/models_fbx/log_003.fbx" id="13_4w6ey"]
+[ext_resource type="PackedScene" uid="uid://cpbg8pm7epfx3" path="res://Fantasy_Free/assets/models_fbx/house_003.fbx" id="14_e30l0"]
+[ext_resource type="PackedScene" uid="uid://cvlsjt4tbg01h" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/bush_large.gltf" id="15_a55hq"]
+[ext_resource type="PackedScene" uid="uid://dtcwieqqedfp3" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/flower_A.gltf" id="16_y56v8"]
+[ext_resource type="PackedScene" uid="uid://dm1ba4sl280nw" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/tree_large.gltf" id="17_i5upn"]
+[ext_resource type="PackedScene" uid="uid://b6najwr12phvv" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/flower_B.gltf" id="18_ygh30"]
+[ext_resource type="PackedScene" uid="uid://3304hgwmepqy" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/bird.gltf" id="19_3166g"]
 
 [sub_resource type="Resource" id="Resource_khu1u"]
 script = ExtResource("3_w686m")
@@ -129,3 +139,63 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406009, -0.591655, -5.5481
 
 [node name="house_001" parent="." instance=ExtResource("9_kl7n3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6271, -0.591655, -8.40508)
+
+[node name="bag_002" parent="." instance=ExtResource("5_5tptm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58679, -0.197048, 4.19667)
+
+[node name="fabulous_mushroom_001" parent="." instance=ExtResource("10_033jh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49022, 2.79489, 10.5847)
+
+[node name="holder_002" parent="." instance=ExtResource("11_drhwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6495, -0.591654, 6.92571)
+
+[node name="jug_003" parent="." instance=ExtResource("12_wojtu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7999, -0.591655, -5.51621)
+
+[node name="log_003" parent="." instance=ExtResource("13_4w6ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4871, -0.591655, -6.83016)
+
+[node name="house_003" parent="." instance=ExtResource("14_e30l0")]
+transform = Transform3D(1, 0, 0, 0, 0.974519, 0.224305, 0, -0.224305, 0.974519, 17.4487, -1.0145, 8.028)
+
+[node name="bush_large2" parent="." instance=ExtResource("15_a55hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9392, -0.591656, -9.73977)
+
+[node name="flower_A2" parent="." instance=ExtResource("16_y56v8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6145, -0.591654, 9.73745)
+
+[node name="flower_A3" parent="." instance=ExtResource("16_y56v8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4317, -0.591655, 9.20252)
+
+[node name="tree_large2" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7563, -0.591653, 12.0541)
+
+[node name="tree_large3" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0642, -0.591657, -11.3398)
+
+[node name="tree_large4" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0383, -0.591655, -11.5103)
+
+[node name="tree_large5" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6443, -0.591653, 12.0089)
+
+[node name="flower_B2" parent="." instance=ExtResource("18_ygh30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.81811, -0.591656, 9.45441)
+
+[node name="bird2" parent="." instance=ExtResource("19_3166g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7829, -0.591655, 11.4434)
+
+[node name="bush_large3" parent="." instance=ExtResource("15_a55hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4349, -0.591655, 8.7405)
+
+[node name="bush_large4" parent="." instance=ExtResource("15_a55hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.749, -0.591655, -10.0778)
+
+[node name="bush_large5" parent="." instance=ExtResource("15_a55hq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4034, -0.591653, -7.5713)
+
+[node name="tree_large6" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66461, -0.591653, 12.3234)
+
+[node name="tree_large7" parent="." instance=ExtResource("17_i5upn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54146, -0.591657, -12.8374)
