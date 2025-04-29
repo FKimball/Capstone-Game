@@ -1,11 +1,10 @@
 [gd_scene load_steps=5 format=4 uid="uid://dnurx7wj0jbv7"]
 
-[ext_resource type="Material" uid="uid://bvyyg8r6dpfei" path="res://Fantasy_FREE/materials/ITHappy.tres" id="1_ugj7j"]
+[ext_resource type="Material" uid="uid://bvyyg8r6dpfei" path="res://Fantasy_Free/materials/ITHappy.tres" id="1_ugj7j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjdb2"]
 resource_name = "Material"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dty4v"]

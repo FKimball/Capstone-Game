@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_4sg5k"]
 script = ExtResource("2_hai5m")
-normals_dialgoue = Array[String](["Hello there!", "Can you help me?", "I need that gem over there!"])
+normals_dialgoue = Array[String](["Hello there!", "Can you help me?", "I need that pile of coins over there!"])
 quest_complete_dialogue = Array[String](["Thank you so much!", "You saved me!"])
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7x1bi"]

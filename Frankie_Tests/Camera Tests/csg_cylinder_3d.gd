@@ -1,4 +1,4 @@
-extends CSGCylinder3D
+extends MeshInstance3D
 
 var questdone = false
 
