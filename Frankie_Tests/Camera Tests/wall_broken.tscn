@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dodlktuitm1gf"]
+
+[ext_resource type="ArrayMesh" uid="uid://deokbrb7l5voq" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_broken.obj" id="1_kn1nk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umpde"]
+size = Vector3(4.28558, 4.51453, 1)
+
+[node name="WallBroken" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71814, -0.591655, -8.44439)
+mesh = ExtResource("1_kn1nk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0686951, 1.75726, 0)
+shape = SubResource("BoxShape3D_umpde")

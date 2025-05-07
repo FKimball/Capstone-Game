@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://c5j3wvw46le62"]
+[gd_scene load_steps=6 format=4 uid="uid://c5j3wvw46le62"]
 
-[ext_resource type="Material" uid="uid://bvyyg8r6dpfei" path="res://Fantasy_FREE/materials/ITHappy.tres" id="1_1yugt"]
+[ext_resource type="Material" uid="uid://bvyyg8r6dpfei" path="res://Fantasy_Free/materials/ITHappy.tres" id="1_1yugt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_in56d"]
 resource_name = "Material"
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 1, 1, 1)
 emission_enabled = true
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_0iug3"]
@@ -42,9 +41,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0iug3")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjrrd"]
+size = Vector3(3.61334, 1.65906, 1)
+
 [node name="cart_001" type="Node3D"]
 
 [node name="cart_001" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_1yugt")
 mesh = SubResource("ArrayMesh_61ouh")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.659271, 0.329529, 0)
+shape = SubResource("BoxShape3D_xjrrd")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://u2siorcmkrld"]
+
+[ext_resource type="ArrayMesh" uid="uid://c6kaofg81m4ko" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_window_closed_scaffold.obj" id="1_hybc1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkr2p"]
+size = Vector3(4.08154, 4.58411, 1)
+
+[node name="WallWindowClosedScaffold" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73988, -0.591655, -8.45288)
+mesh = ExtResource("1_hybc1")
+
+[node name="MeshInstance3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0012207, 1.79205, 0)
+shape = SubResource("BoxShape3D_wkr2p")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2m42ttj5velb"]
+
+[ext_resource type="ArrayMesh" uid="uid://rhbw0hxsfqpv" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_shelves.obj" id="1_qmf1y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hv4n3"]
+size = Vector3(3.99255, 4.69263, 1)
+
+[node name="WallShelves" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.31507, -0.591655, -8.41088)
+mesh = ExtResource("1_qmf1y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00421143, 1.84631, 0)
+shape = SubResource("BoxShape3D_hv4n3")

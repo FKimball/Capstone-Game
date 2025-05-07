@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckb25ves4vgyv"]
+
+[ext_resource type="PackedScene" uid="uid://bjxidgx1mhjdt" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/street_lantern.gltf" id="1_w18uv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_srced"]
+height = 8.43905
+
+[node name="street_lantern2" instance=ExtResource("1_w18uv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+shape = SubResource("CapsuleShape3D_srced")

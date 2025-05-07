@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=4 uid="uid://dnurx7wj0jbv7"]
+[gd_scene load_steps=6 format=4 uid="uid://dnurx7wj0jbv7"]
 
 [ext_resource type="Material" uid="uid://bvyyg8r6dpfei" path="res://Fantasy_Free/materials/ITHappy.tres" id="1_ugj7j"]
 
@@ -39,9 +39,18 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dty4v")
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_myf4a"]
+radius = 1.30252
+height = 12.1731
+
 [node name="fir_001" type="Node3D"]
 
 [node name="fir_001" type="MeshInstance3D" parent="."]
 material_override = ExtResource("1_ugj7j")
 mesh = SubResource("ArrayMesh_psgah")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CapsuleShape3D_myf4a")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://q57x400r3hbx"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5yw8qlp1hu0a" path="res://addons/kaykit_dungeon_remastered/Assets/obj/stairs_wide.obj" id="1_md5ry"]
+
+[node name="StairsWide" type="MeshInstance3D"]
+transform = Transform3D(-0.999995, 0, -0.00321136, 0, 1, 0, 0.00321136, 0, -0.999995, 3.04055, -1.01283, 34.3167)
+mesh = ExtResource("1_md5ry")
