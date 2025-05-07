@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://5gv8v04hl4oe"]
+[gd_scene load_steps=51 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
@@ -6,12 +6,16 @@
 [ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
 [ext_resource type="Texture2D" uid="uid://snfejdvvwjva" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/tiny_treats_grass_texture.png" id="4_8asav"]
 [ext_resource type="Texture2D" uid="uid://ifs6ismd4tg1" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/sand-texture.jpg" id="5_gtsjh"]
+[ext_resource type="Texture2D" uid="uid://cgedfx2qvntb5" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/tiny_treats_grass_texture.png" id="5_rijxs"]
+[ext_resource type="ArrayMesh" uid="uid://23ythbafk4hg" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/hedge_straight_long.obj" id="7_3d52u"]
 [ext_resource type="ArrayMesh" uid="uid://c4wglsepvjte7" path="res://addons/kaykit_dungeon_remastered/Assets/obj/coin_stack_medium.obj" id="7_upxjp"]
 [ext_resource type="ArrayMesh" uid="uid://s5lbi7sycodt" path="res://addons/kaykit_dungeon_remastered/Assets/obj/coin_stack_small.obj" id="7_wolpv"]
 [ext_resource type="PackedScene" uid="uid://bl08kl586iut4" path="res://Fantasy_Free/nodes/holder_001.tscn" id="8_g1d2r"]
 [ext_resource type="PackedScene" uid="uid://c5j3wvw46le62" path="res://Fantasy_Free/nodes/cart_001.tscn" id="8_ga4ci"]
+[ext_resource type="ArrayMesh" uid="uid://bysfc1b6dc3eo" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/hedge_straight.obj" id="8_j8u4y"]
 [ext_resource type="PackedScene" uid="uid://2is765vq6m86" path="res://Fantasy_Free/nodes/bucket_001.tscn" id="9_4coxq"]
 [ext_resource type="ArrayMesh" uid="uid://db44ilvoq5xh7" path="res://addons/kaykit_dungeon_remastered/Assets/obj/floor_tile_small_broken_B.obj" id="9_81jl2"]
+[ext_resource type="ArrayMesh" uid="uid://hkvkwvs30nxs" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/hedge_corner.obj" id="9_je1db"]
 [ext_resource type="PackedScene" uid="uid://pkbnx6nvoro2" path="res://Fantasy_Free/nodes/house_001.tscn" id="9_kl7n3"]
 [ext_resource type="PackedScene" uid="uid://dnx6lqql7o1pq" path="res://Fantasy_Free/nodes/house_002.tscn" id="10_cq386"]
 [ext_resource type="PackedScene" uid="uid://dnurx7wj0jbv7" path="res://Fantasy_Free/nodes/fir_001.tscn" id="11_f8jdm"]
@@ -36,16 +40,13 @@
 [ext_resource type="ArrayMesh" uid="uid://705brrg355x8" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_corner.obj" id="34_b130m"]
 [ext_resource type="ArrayMesh" uid="uid://dytos7fn21t31" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_arched.obj" id="35_gbb3j"]
 [ext_resource type="ArrayMesh" uid="uid://nmiwqu0s7xs0" path="res://addons/kaykit_dungeon_remastered/Assets/obj/wall_pillar.obj" id="36_tbcm3"]
+[ext_resource type="ArrayMesh" uid="uid://bex25dcd8c0xd" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/bird.obj" id="37_w7o6d"]
+[ext_resource type="ArrayMesh" uid="uid://c5yw8qlp1hu0a" path="res://addons/kaykit_dungeon_remastered/Assets/obj/stairs_wide.obj" id="42_moqht"]
 
 [sub_resource type="Resource" id="Resource_khu1u"]
 script = ExtResource("3_w686m")
-normals_dialgoue = Array[String](["You helped my brother! for helping my friend!", "Now you gotta help me", "Can you find my lost coins?", "it might be hidden in some trees"])
+normals_dialgoue = Array[String](["You helped my brother! for helping my friend!", "Now you gotta help me", "Can you find my lost coins?", "Check the trees over there!"])
 quest_complete_dialogue = Array[String](["Nice job!", "I think my brother needs your help..."])
-
-[sub_resource type="Resource" id="Resource_gmdfe"]
-script = ExtResource("3_w686m")
-normals_dialgoue = Array[String](["I heard you're good at finding stuff", "I lost my coins in the desert out here ", "Can you help me find it?"])
-quest_complete_dialogue = Array[String](["Thank you so much!", "You've helped us all out and the color is back!"])
 
 [sub_resource type="Resource" id="Resource_4chqf"]
 script = ExtResource("3_w686m")
@@ -58,8 +59,19 @@ albedo_texture = ExtResource("4_8asav")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekcjt"]
 albedo_texture = ExtResource("4_8asav")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a220f"]
+albedo_texture = ExtResource("5_rijxs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6slo"]
+albedo_texture = ExtResource("5_rijxs")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oiy4s"]
 albedo_texture = ExtResource("5_gtsjh")
+
+[sub_resource type="Resource" id="Resource_gmdfe"]
+script = ExtResource("3_w686m")
+normals_dialgoue = Array[String](["I heard you're good at finding stuff", "I lost my coins in the desert out here ", "Can you help me find it?"])
+quest_complete_dialogue = Array[String](["Thank you so much!", "You've helped us all out and the color is back!"])
 
 [node name="Node3D" type="Node3D"]
 
@@ -75,14 +87,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21636, -0.162942, 20.8919)
 quest_item = NodePath("../Stone")
 dialogue = SubResource("Resource_khu1u")
 
-[node name="NPC3" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.92525, -0.162441, 57.6047)
-quest_item = NodePath("../Coin")
-dialogue = SubResource("Resource_gmdfe")
-
 [node name="NPC4" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.191094, -0.162441, -2.06993)
-quest_item = NodePath("../Coin")
+quest_item = NodePath("../Desert/Coin")
 dialogue = SubResource("Resource_4chqf")
 
 [node name="platform 1" type="CSGBox3D" parent="."]
@@ -97,11 +104,721 @@ material_override = SubResource("StandardMaterial3D_ekcjt")
 use_collision = true
 size = Vector3(23.7201, 0.608398, 12.8548)
 
-[node name="platform 3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.603037, -0.925781, 54.7293)
+[node name="pathway" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5667, -1.10771, 23.2881)
+material_override = SubResource("StandardMaterial3D_a220f")
+use_collision = true
+size = Vector3(24.2495, 1, 14.303)
+
+[node name="Treeline2" parent="pathway" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.0131769, 0, 0.999913, 0, 1, 0, -0.999913, 0, -0.0131769, 15.1803, 0.498101, -6.54228)
+
+[node name="fir_003" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_005" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.295341, 0, 0.955392, 0, 1, 0, -0.955392, 0, 0.295341, 0, 0, -4.44258)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_005" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_005" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_006" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.295341, 0, 0.955392, 0, 1, 0, -0.955392, 0, 0.295341, 0, 0, -7.96649)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_006" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_006" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_007" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.250769, 0, 0.968047, 0, 1, 0, -0.968047, 0, -0.250769, 0, 0, -12.2412)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_007" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_007" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_008" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.420482, 0, 0.907301, 0, 1, 0, -0.907301, 0, 0.420482, 0, 0, -15.3884)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_008" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_008" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_009" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.504482, 0, 0.863422, 0, 1, 0, -0.863422, 0, -0.504482, 0, 0, -20.2565)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_009" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_009" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_010" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.627569, 0, 0.778561, 0, 1, 0, -0.778561, 0, 0.627569, 0, 0, -22.6143)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_010" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_010" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_011" parent="pathway/Treeline2" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.997411, 0, 0.0719153, 0, 1, 0, -0.0719153, 0, 0.997411, 0, 0, -24.5135)
+
+[node name="fir_003" parent="pathway/Treeline2/fir_011" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline2/fir_011" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="Treeline3" parent="pathway" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.0131769, 0, 0.999913, 0, 1, 0, -0.999913, 0, -0.0131769, 15.1803, 0.498101, 4.32223)
+
+[node name="fir_003" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_005" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.295341, 0, 0.955392, 0, 1, 0, -0.955392, 0, 0.295341, 0, 0, -4.44258)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_005" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_005" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_006" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.295341, 0, 0.955392, 0, 1, 0, -0.955392, 0, 0.295341, 0, 0, -7.96649)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_006" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_006" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_007" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.250769, 0, 0.968047, 0, 1, 0, -0.968047, 0, -0.250769, 0, 0, -12.2412)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_007" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_007" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_008" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.420482, 0, 0.907301, 0, 1, 0, -0.907301, 0, 0.420482, 0, 0, -15.3884)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_008" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_008" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_009" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(-0.504482, 0, 0.863422, 0, 1, 0, -0.863422, 0, -0.504482, 0, 0, -20.2565)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_009" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_009" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_010" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.627569, 0, 0.778561, 0, 1, 0, -0.778561, 0, 0.627569, 0, 0, -22.6143)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_010" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_010" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="fir_011" parent="pathway/Treeline3" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(0.997411, 0, 0.0719153, 0, 1, 0, -0.0719153, 0, 0.997411, 0, 0, -24.5135)
+
+[node name="fir_003" parent="pathway/Treeline3/fir_011" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
+
+[node name="fir_004" parent="pathway/Treeline3/fir_011" instance=ExtResource("11_f8jdm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
+
+[node name="Maze" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.2509, -1.10771, 28.5745)
+material_override = SubResource("StandardMaterial3D_q6slo")
+size = Vector3(31.0197, 1, 24.7788)
+
+[node name="Hedgemaze" type="MeshInstance3D" parent="Maze"]
+transform = Transform3D(1, 0, 0, 0, 1.5, 0, 0, 0, 1, 7.39467, 0.132967, -11.1056)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../..")
+
+[node name="HedgeStraightLong24" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.63834, 0, 0)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong2" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.82389, 0, -0.0424919)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong3" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.78514, 0, -0.135181)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong27" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00746989, 0, -0.999972, 0, 1, 0, 0.999972, 0, 0.00746989, -9.67435, 0, 2.05101)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong34" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00746989, 0, -0.999972, 0, 1, 0, 0.999972, 0, 0.00746989, -9.67435, 0, 5.69244)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong35" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00746989, 0, -0.999972, 0, 1, 0, 0.999972, 0, 0.00746989, -9.67435, 0, 9.36718)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong36" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00746989, 0, -0.999972, 0, 1, 0, 0.999972, 0, 0.00746989, -9.67435, 0, 12.9339)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong37" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00746989, 0, -0.999972, 0, 1, 0, 0.999972, 0, 0.00746989, -9.67435, 0, 16.6501)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong38" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999927, 0, -0.0121122, 0, 1, 0, 0.0121122, 0, -0.999927, -11.7744, 0, 16.6501)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong39" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999927, 0, -0.0121122, 0, 1, 0, 0.0121122, 0, -0.999927, -15.2479, 0, 16.6501)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong40" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0106288, 0, -0.999944, 0, 1, 0, 0.999944, 0, 0.0106288, -16.7012, 0, 15.0315)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong41" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0106288, 0, -0.999944, 0, 1, 0, 0.999944, 0, 0.0106288, -16.7012, 0, 12.1199)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong42" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0106288, 0, -0.999944, 0, 1, 0, 0.999944, 0, 0.0106288, -16.7012, 0, 9.45868)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong43" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0106288, 0, -0.999944, 0, 1, 0, 0.999944, 0, 0.0106288, -16.7012, 0, 6.85423)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong4" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5411, 0, -0.200867)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong5" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3988, 0, -0.171253)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong6" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.205, 6.55651e-07, -0.148094)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraight" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0371, 0, -0.215023)
+mesh = ExtResource("8_j8u4y")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraight2" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83197, 0, 17.3097)
+mesh = ExtResource("8_j8u4y")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong7" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.0316026, 0, 0.999501, 0, 1, 0, -0.999501, 0, -0.0316026, -22.3465, 0, 2.15531)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong8" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0123391, 0, 0.999924, 0, 1, 0, -0.999924, 0, 0.0123391, -22.3591, 0, 6.25094)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong9" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.0380739, 0, 0.999275, 0, 1, 0, -0.999275, 0, -0.0380739, -22.2442, 0, 9.94501)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong10" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.0380739, 0, 0.999275, 0, 1, 0, -0.999275, 0, -0.0380739, -22.2911, 0, 13.7543)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong11" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0098261, 0, 0.999952, 0, 1, 0, -0.999952, 0, 0.0098261, -22.1992, 0, 17.5909)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong12" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.0098261, 0, 0.999952, 0, 1, 0, -0.999952, 0, 0.0098261, -22.1992, 0, 21.5373)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong13" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -19.7423, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong14" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -15.949, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong15" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -12.212, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong16" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -8.67958, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong17" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -4.87882, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong18" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, -1.13702, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong19" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, 2.66688, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong20" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999973, 0, -0.00734768, 0, 1, 0, 0.00734768, 0, -0.999973, 6.21983, 0, 22.6861)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong21" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00307163, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.00307163, 7.38162, 0, 20.2783)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong22" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00307163, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.00307163, 7.38162, 0, 16.725)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong23" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00307163, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.00307163, 7.38162, 0, 12.8571)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong25" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00307163, 0, -0.999995, 0, 1, 0, 0.999995, 0, 0.00307163, 7.38162, 0, 9.18805)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong26" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999623, 0, -0.0274679, 0, 1, 0, 0.0274679, 0, -0.999623, 6.23114, -0.023721, 6.75801)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong28" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999623, 0, -0.0274679, 0, 1, 0, 0.0274679, 0, -0.999623, 2.53826, -0.023721, 6.91083)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong29" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.999623, 0, -0.0274679, 0, 1, 0, 0.0274679, 0, -0.999623, -1.18848, -0.023721, 6.91083)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong30" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00816786, 0, -0.999967, 0, 1, 0, 0.999967, 0, 0.00816786, -2.41451, -0.023721, 9.08279)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong31" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00816786, 0, -0.999967, 0, 1, 0, 0.999967, 0, 0.00816786, -2.41451, -0.023721, 12.6184)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong32" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.00816786, 0, -0.999967, 0, 1, 0, 0.999967, 0, 0.00816786, -2.41451, -0.023721, 16.1063)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeStraightLong33" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(0.999971, 0, 0.00760936, 0, 1, 0, -0.00760936, 0, 0.999971, -0.877441, -0.023721, 17.4629)
+mesh = ExtResource("7_3d52u")
+skeleton = NodePath("../../..")
+
+[node name="HedgeCorner" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.0132816, 0, -0.999912, 0, 1, 0, 0.999912, 0, -0.0132816, 7.41126, 0.0609665, -0.00977325)
+mesh = ExtResource("9_je1db")
+skeleton = NodePath("../../..")
+
+[node name="tree_001" parent="Maze/Hedgemaze" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -13.2887, 0.23544, 16.5647)
+
+[node name="tree_002" parent="Maze/Hedgemaze/tree_001" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63068, 1.01328e-06, -4.5751)
+
+[node name="tree_003" parent="Maze/Hedgemaze/tree_001" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10945, 1.01328e-06, -5.27)
+
+[node name="tree_002" parent="Maze/Hedgemaze" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 1.92456, 0.72593, 17.1939)
+
+[node name="tree_002" parent="Maze/Hedgemaze/tree_002" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97275, 1.01328e-06, -4.5751)
+
+[node name="tree_004" parent="Maze/Hedgemaze/tree_002" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97275, 1.01328e-06, 5.49499)
+
+[node name="tree_005" parent="Maze/Hedgemaze/tree_002" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2889, 1.01328e-06, 5.49499)
+
+[node name="tree_006" parent="Maze/Hedgemaze/tree_002" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3081, 1.01328e-06, 5.495)
+
+[node name="tree_003" parent="Maze/Hedgemaze/tree_002" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.56295, 1.01328e-06, -5.27)
+
+[node name="tree_003" parent="Maze/Hedgemaze" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -3.10833, 0.23544, 7.16138)
+
+[node name="tree_002" parent="Maze/Hedgemaze/tree_003" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63068, 1.01328e-06, -6.97891)
+
+[node name="tree_003" parent="Maze/Hedgemaze/tree_003" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10945, 1.01328e-06, -6.8192)
+
+[node name="tree_004" parent="Maze/Hedgemaze" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -16.856, 0.23544, 7.16138)
+
+[node name="tree_002" parent="Maze/Hedgemaze/tree_004" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.05444, 1.01328e-06, -4.5751)
+
+[node name="tree_003" parent="Maze/Hedgemaze/tree_004" instance=ExtResource("12_0hxhx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.81578, 0.464806, -7.529)
+
+[node name="HedgeStraight3" type="MeshInstance3D" parent="Maze/Hedgemaze"]
+transform = Transform3D(-0.0368007, 0, 0.999323, 0, 1, 0, -0.999323, 0, -0.0368007, 7.31238, -0.0833632, 2.22479)
+mesh = ExtResource("8_j8u4y")
+skeleton = NodePath("../../..")
+
+[node name="Desert" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.910076, 2.6683, 58.6097)
 material_override = SubResource("StandardMaterial3D_oiy4s")
 use_collision = true
-size = Vector3(23.7201, 0.608398, 48.769)
+size = Vector3(23.106, 0.608398, 48.769)
+
+[node name="ChestGold" type="MeshInstance3D" parent="Desert"]
+transform = Transform3D(-0.99814, 0, 0.0609615, 0, 1, 0, -0.0609615, 0, -0.99814, 0.256717, 0.304199, 18.4852)
+mesh = ExtResource("32_x4idw")
+skeleton = NodePath("../..")
+
+[node name="Coin" parent="Desert" instance=ExtResource("2_2yveb")]
+transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, 6.07981, 0.504413, 5.0626)
+item_name = "Coin"
+
+[node name="CoinStackSmall" type="MeshInstance3D" parent="Desert/Coin"]
+transform = Transform3D(2.31553, 0, -2.39779, 0, 3.33333, 0, 2.39779, 0, 2.31553, -0.303726, -0.695426, -0.0636292)
+mesh = ExtResource("7_wolpv")
+skeleton = NodePath("../../..")
+
+[node name="house_001" parent="Desert" instance=ExtResource("9_kl7n3")]
+transform = Transform3D(0.602038, 0, 0.798467, 0, 1, 0, -0.798467, 0, 0.602038, -6.14202, 0.334126, 4.2564)
+
+[node name="WallCornerSmall" type="MeshInstance3D" parent="Desert"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2988, 0.3042, 11.0583)
+mesh = ExtResource("18_03nm7")
+skeleton = NodePath("../..")
+
+[node name="Wall2" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97454, 0, 0.0133743)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="Wall" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99928, -4.76837e-07, -0.00913239)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="Wall5" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7434, 0, 0.015892)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="Wall4" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9707, -4.76837e-07, -0.000915527)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="WallCornerGated" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(-0.0245368, 0, 0.999699, 0, 1, 0, -0.999699, 0, -0.0245368, -22.5912, 0, 0.0824966)
+mesh = ExtResource("20_xtkt7")
+skeleton = NodePath("../../..")
+
+[node name="WallDoorwayScaffold" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9857, -9.53674e-07, -0.121864)
+mesh = ExtResource("21_uuypp")
+skeleton = NodePath("../../..")
+
+[node name="BannerPatternAGreen" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(-0.99951, 0, 0.0313062, 0, 1, 0, -0.0313062, 0, -0.99951, -15.4064, -0.204647, 0.0286942)
+mesh = ExtResource("22_yq65e")
+skeleton = NodePath("../../..")
+
+[node name="Wall3" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(-0.00411895, 0, 0.999991, 0, 1, 0, -0.999991, 0, -0.00411895, -22.517, -1.72853e-06, 6.77)
+mesh = ExtResource("19_yq2xx")
+
+[node name="WallHalf" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(0.019878, 0, 0.999802, 0, 1, 0, -0.999802, 0, 0.019878, -22.5086, 0.028717, 4.97612)
+mesh = ExtResource("25_ndk3w")
+
+[node name="WallHalf2" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(0.0364344, 0, 0.999336, 0, 1, 0, -0.999336, 0, 0.0364344, -22.516, 1.13249e-06, 3.3011)
+mesh = ExtResource("25_ndk3w")
+
+[node name="Wall6" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(-0.000890106, 0, 1, 0, 1, 0, -1, 0, -0.000890106, -0.0804996, -1.96695e-06, 2.8695)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="WallArchedwindowGated" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(0.000750492, 0, 1, 0, 1, 0, -1, 0, 0.000750492, -0.116799, -9.53674e-07, 6.71661)
+mesh = ExtResource("33_xhts1")
+skeleton = NodePath("../../..")
+
+[node name="WallCorner" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(0.00787138, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00787138, -0.1322, 0.010456, 10.6342)
+mesh = ExtResource("34_b130m")
+skeleton = NodePath("../../..")
+
+[node name="WallArched" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08196, 0.019431, 10.6359)
+mesh = ExtResource("35_gbb3j")
+skeleton = NodePath("../../..")
+
+[node name="WallPillar" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.05483, -9.53674e-07, 10.5511)
+mesh = ExtResource("36_tbcm3")
+skeleton = NodePath("../../..")
+
+[node name="WallBroken2" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9901, -9.53674e-07, 10.507)
+mesh = ExtResource("30_ppv2v")
+skeleton = NodePath("../../..")
+
+[node name="Wall7" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8049, -9.53674e-07, 10.5261)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="Wall8" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8096, -9.53674e-07, 10.5279)
+mesh = ExtResource("19_yq2xx")
+skeleton = NodePath("../../..")
+
+[node name="WallCorner2" type="MeshInstance3D" parent="Desert/WallCornerSmall"]
+transform = Transform3D(-0.999957, 0, 0.00925016, 0, 1, 0, -0.00925016, 0, -0.999957, -22.5916, 0, 10.5832)
+mesh = ExtResource("34_b130m")
+skeleton = NodePath("../../..")
+
+[node name="NPC3" parent="Desert" node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32221, 0.76334, 2.8754)
+quest_item = NodePath("../Coin")
+dialogue = SubResource("Resource_gmdfe")
+
+[node name="Cactuspatch" parent="Desert" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.10727, 0.304199, 8.5501)
+
+[node name="cactus_004" parent="Desert/Cactuspatch" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="cactus_006" parent="Desert/Cactuspatch" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
+
+[node name="cactus_004" parent="Desert/Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="Cactuspatch2" parent="Desert" instance=ExtResource("16_skxcf")]
+transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -10.2001, 0.304199, 3.4403)
+
+[node name="cactus_004" parent="Desert/Cactuspatch2" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch2" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch2" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch2" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="cactus_006" parent="Desert/Cactuspatch2" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
+
+[node name="cactus_004" parent="Desert/Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="Cactuspatch3" parent="Desert" instance=ExtResource("16_skxcf")]
+transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -10.2001, 0.304199, -2.3323)
+
+[node name="cactus_004" parent="Desert/Cactuspatch3" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch3" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch3" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch3" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="cactus_006" parent="Desert/Cactuspatch3" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
+
+[node name="cactus_004" parent="Desert/Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="Cactuspatch4" parent="Desert" instance=ExtResource("16_skxcf")]
+transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, 8.39344, 0.304199, -18.6868)
+
+[node name="cactus_004" parent="Desert/Cactuspatch4" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch4" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch4" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch4" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="cactus_006" parent="Desert/Cactuspatch4" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
+
+[node name="cactus_004" parent="Desert/Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="Cactuspatch5" parent="Desert" instance=ExtResource("16_skxcf")]
+transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -10.5117, 0.304199, -18.6868)
+
+[node name="cactus_004" parent="Desert/Cactuspatch5" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch5" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch5" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch5" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="cactus_006" parent="Desert/Cactuspatch5" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
+
+[node name="cactus_004" parent="Desert/Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
+
+[node name="cactus_002" parent="Desert/Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
+
+[node name="cactus_003" parent="Desert/Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
+
+[node name="cactus_005" parent="Desert/Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
+
+[node name="BoxStacked" type="MeshInstance3D" parent="Desert"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04078, 0.304199, 9.7985)
+mesh = ExtResource("23_dqkkw")
+skeleton = NodePath("../..")
+script = ExtResource("24_2ij6t")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.292272, 0.956335, 0, -0.956335, 0.292272, -2.25159, 7.60746, 2.19677)
@@ -120,17 +837,8 @@ transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398
 item_name = "Stone"
 
 [node name="CoinStackMedium" type="MeshInstance3D" parent="Stone"]
-transform = Transform3D(2.31553, 0, -2.39779, 0, 3.33333, 0, 2.39779, 0, 2.31553, 0.281563, -1.38587, 0.272827)
+transform = Transform3D(2.31553, 0, -2.39779, 0, 3.33333, 0, 2.39779, 0, 2.31553, -125.742, -1.35667, -109.358)
 mesh = ExtResource("7_upxjp")
-skeleton = NodePath("../..")
-
-[node name="Coin" parent="." instance=ExtResource("2_2yveb")]
-transform = Transform3D(0.208398, 0, 0.215802, 0, 0.3, 0, -0.215802, 0, 0.208398, 5.47677, -0.421368, 59.7919)
-item_name = "Coin"
-
-[node name="CoinStackSmall" type="MeshInstance3D" parent="Coin"]
-transform = Transform3D(2.31553, 0, -2.39779, 0, 3.33333, 0, 2.39779, 0, 2.31553, -0.303726, -0.695426, -0.0636292)
-mesh = ExtResource("7_wolpv")
 skeleton = NodePath("../..")
 
 [node name="Platform" type="CSGBox3D" parent="."]
@@ -175,9 +883,6 @@ skeleton = NodePath("../..")
 
 [node name="prop" parent="." instance=ExtResource("8_g1d2r")]
 transform = Transform3D(0.837499, 0, -0.546438, 0, 1, 0, 0.546438, 0, 0.837499, 2.27629, -0.591655, 4.37208)
-
-[node name="house_001" parent="." instance=ExtResource("9_kl7n3")]
-transform = Transform3D(0.602038, 0, 0.798467, 0, 1, 0, -0.798467, 0, 0.602038, -6.74506, -0.591655, 58.9857)
 
 [node name="cart_001" parent="." instance=ExtResource("8_ga4ci")]
 transform = Transform3D(0.980809, 0.194971, 0, -0.194971, 0.980809, 0, 0, 0, 1, 7.29867, -0.621582, 20.6296)
@@ -335,15 +1040,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9594, 0, -0.9837)
 [node name="fir_004" parent="Treeline/Treeline/fir_011" instance=ExtResource("11_f8jdm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.091053, 0.0299273, -2.25497)
 
-[node name="tree_001" parent="." instance=ExtResource("12_0hxhx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92352, -0.621583, 28.7103)
-
-[node name="tree_002" parent="." instance=ExtResource("12_0hxhx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5542, -0.621582, 24.1352)
-
-[node name="tree_003" parent="." instance=ExtResource("12_0hxhx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81407, -0.621582, 23.4403)
-
 [node name="street_lantern2" parent="." instance=ExtResource("13_rdc1a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.41056, -0.590446, 22.2513)
 
@@ -365,212 +1061,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.788238, -0.0213655, 1.22743
 [node name="cobble_stones2" parent="cobble_stones2/cobble_stones2/cobble_stones2/cobble_stones2" instance=ExtResource("14_h0df2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02406, 0.0254374, 0.708412)
 
-[node name="Cactuspatch" parent="." instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50423, -0.621582, 63.2794)
-
-[node name="cactus_004" parent="Cactuspatch" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="cactus_006" parent="Cactuspatch" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
-
-[node name="cactus_004" parent="Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="Cactuspatch2" parent="." instance=ExtResource("16_skxcf")]
-transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -10.8031, -0.621582, 58.1696)
-
-[node name="cactus_004" parent="Cactuspatch2" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch2" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch2" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch2" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="cactus_006" parent="Cactuspatch2" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
-
-[node name="cactus_004" parent="Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch2/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="Cactuspatch3" parent="." instance=ExtResource("16_skxcf")]
-transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -10.8031, -0.621582, 52.397)
-
-[node name="cactus_004" parent="Cactuspatch3" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch3" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch3" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch3" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="cactus_006" parent="Cactuspatch3" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
-
-[node name="cactus_004" parent="Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch3/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="Cactuspatch4" parent="." instance=ExtResource("16_skxcf")]
-transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, 7.7904, -0.621582, 36.0425)
-
-[node name="cactus_004" parent="Cactuspatch4" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch4" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch4" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch4" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="cactus_006" parent="Cactuspatch4" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
-
-[node name="cactus_004" parent="Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch4/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="Cactuspatch5" parent="." instance=ExtResource("16_skxcf")]
-transform = Transform3D(0.55169, 0, -0.83405, 0, 1, 0, 0.83405, 0, 0.55169, -11.1147, -0.621582, 36.0425)
-
-[node name="cactus_004" parent="Cactuspatch5" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch5" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch5" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch5" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="cactus_006" parent="Cactuspatch5" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67612, 0, 0.777863)
-
-[node name="cactus_004" parent="Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47216, -9.53674e-07, -0.870773)
-
-[node name="cactus_002" parent="Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376733, 0, -0.822388)
-
-[node name="cactus_003" parent="Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27027, 0, 0.0701065)
-
-[node name="cactus_005" parent="Cactuspatch5/cactus_006" instance=ExtResource("16_skxcf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05472, -9.53674e-07, -0.407082)
-
-[node name="WallCornerSmall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6958, -0.621581, 65.7876)
-mesh = ExtResource("18_03nm7")
-
-[node name="Wall2" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97454, 0, 0.0133743)
-mesh = ExtResource("19_yq2xx")
-skeleton = NodePath("../..")
-
-[node name="Wall" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.99928, -4.76837e-07, -0.00913239)
-mesh = ExtResource("19_yq2xx")
-skeleton = NodePath("../..")
-
-[node name="Wall5" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.7434, 0, 0.015892)
-mesh = ExtResource("19_yq2xx")
-skeleton = NodePath("../..")
-
-[node name="Wall4" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9707, -4.76837e-07, -0.000915527)
-mesh = ExtResource("19_yq2xx")
-skeleton = NodePath("../..")
-
-[node name="WallCornerGated" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(-0.0245368, 0, 0.999699, 0, 1, 0, -0.999699, 0, -0.0245368, -22.5912, 0, 0.0824966)
-mesh = ExtResource("20_xtkt7")
-skeleton = NodePath("../..")
-
-[node name="WallDoorwayScaffold" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9857, -9.53674e-07, -0.121864)
-mesh = ExtResource("21_uuypp")
-skeleton = NodePath("../..")
-
-[node name="BannerPatternAGreen" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(-0.99951, 0, 0.0313062, 0, 1, 0, -0.0313062, 0, -0.99951, -15.4064, -0.204647, 0.0286942)
-mesh = ExtResource("22_yq65e")
-skeleton = NodePath("../..")
-
-[node name="Wall3" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(-0.00411895, 0, 0.999991, 0, 1, 0, -0.999991, 0, -0.00411895, -22.517, -1.72853e-06, 6.77)
-mesh = ExtResource("19_yq2xx")
-
-[node name="WallHalf" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(0.019878, 0, 0.999802, 0, 1, 0, -0.999802, 0, 0.019878, -22.5086, 0.028717, 4.97612)
-mesh = ExtResource("25_ndk3w")
-
-[node name="WallHalf2" type="MeshInstance3D" parent="WallCornerSmall"]
-transform = Transform3D(0.0364344, 0, 0.999336, 0, 1, 0, -0.999336, 0, 0.0364344, -22.516, 1.13249e-06, 3.3011)
-mesh = ExtResource("25_ndk3w")
-
-[node name="BoxStacked" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43774, -0.621582, 64.5278)
-mesh = ExtResource("23_dqkkw")
-script = ExtResource("24_2ij6t")
-
 [node name="WallScaffold" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31699, -0.591654, -8.34909)
 mesh = ExtResource("27_s2mqe")
@@ -587,42 +1077,14 @@ mesh = ExtResource("29_0gfjd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71814, -0.591655, -8.44439)
 mesh = ExtResource("30_ppv2v")
 
-[node name="ChestGold" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.99814, 0, 0.0609615, 0, 1, 0, -0.0609615, 0, -0.99814, -0.34632, -0.621582, 73.2145)
-mesh = ExtResource("32_x4idw")
+[node name="Bird" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.736088, 0, -0.143788, 0, 0.75, 0, 0.143788, 0, -0.736088, 0.793551, 0.187535, 3.37173)
+mesh = ExtResource("37_w7o6d")
 
-[node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.000890106, 0, 1, 0, 1, 0, -1, 0, -0.000890106, 10.6153, -0.621583, 68.6571)
-mesh = ExtResource("19_yq2xx")
+[node name="StairsWide" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999995, 0, -0.00321136, 0, 1, 0, 0.00321136, 0, -0.999995, 3.04055, -1.01283, 34.3167)
+mesh = ExtResource("42_moqht")
 
-[node name="WallArchedwindowGated" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.000750492, 0, 1, 0, 1, 0, -1, 0, 0.000750492, 10.579, -0.621582, 72.5042)
-mesh = ExtResource("33_xhts1")
-
-[node name="WallCorner" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00787138, 0, -0.999969, 0, 1, 0, 0.999969, 0, 0.00787138, 10.5636, -0.611125, 76.4218)
-mesh = ExtResource("34_b130m")
-
-[node name="WallArched" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.61384, -0.60215, 76.4235)
-mesh = ExtResource("35_gbb3j")
-
-[node name="WallPillar" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64097, -0.621582, 76.3387)
-mesh = ExtResource("36_tbcm3")
-
-[node name="WallBroken2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29426, -0.621582, 76.2946)
-mesh = ExtResource("30_ppv2v")
-
-[node name="Wall2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1091, -0.621582, 76.3137)
-mesh = ExtResource("19_yq2xx")
-
-[node name="Wall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.11377, -0.621582, 76.3155)
-mesh = ExtResource("19_yq2xx")
-
-[node name="WallCorner2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.999957, 0, 0.00925016, 0, 1, 0, -0.00925016, 0, -0.999957, -11.8958, -0.621581, 76.3708)
-mesh = ExtResource("34_b130m")
+[node name="StairsWide2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.999995, 0, -0.00321136, 0, 1, 0, 0.00321136, 0, -0.999995, -3.13588, -1.01283, 34.3167)
+mesh = ExtResource("42_moqht")
