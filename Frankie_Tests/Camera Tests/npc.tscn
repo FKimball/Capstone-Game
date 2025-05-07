@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsjpcn08raqtk"]
+[gd_scene load_steps=8 format=3 uid="uid://dsjpcn08raqtk"]
 
 [ext_resource type="Script" path="res://npc.gd" id="1_r2gkd"]
 [ext_resource type="Script" path="res://dialogue.gd" id="2_hai5m"]
 
 [sub_resource type="Resource" id="Resource_4sg5k"]
 script = ExtResource("2_hai5m")
-normals_dialgoue = Array[String](["Hello there!", "Can you help me?", "I need that pile of coins over there!"])
+normals_dialgoue = Array[String](["Hello there!", "Can you help me?", "I need that pile of coins over there! Bring them back to me when you find them!"])
 quest_complete_dialogue = Array[String](["Thank you so much!", "You saved me!"])
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01ufx"]
+albedo_color = Color(0.655568, 1.85303e-06, 4.81307e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yj1sr"]
+albedo_color = Color(0.654902, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7u5pg"]
+albedo_color = Color(0.654902, 0, 0, 1)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7x1bi"]
 radius = 0.391054
@@ -20,14 +29,17 @@ dialogue = SubResource("Resource_4sg5k")
 transform = Transform3D(0.877322, 0, 0.479902, 0, 1, 0, -0.479902, 0, 0.877322, 0, 0, 0)
 use_collision = true
 radius = 0.375242
+material = SubResource("StandardMaterial3D_01ufx")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="CSGSphere3D"]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.138891, -0.169548, 0.0214993)
 radius = 0.295552
+material = SubResource("StandardMaterial3D_yj1sr")
 
 [node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGSphere3D"]
 transform = Transform3D(0.344001, 0, -0.362856, 0, 1, 0, 0.362856, 0, 0.344001, 0.0688085, -0.174445, 0.110302)
 radius = 0.295552
+material = SubResource("StandardMaterial3D_7u5pg")
 
 [node name="DialogueBox" type="PanelContainer" parent="."]
 offset_left = 806.0
