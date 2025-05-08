@@ -1,38 +1,47 @@
-[gd_scene format=3 uid="uid://bvea0bsr28d1p"]
+[gd_scene load_steps=3 format=3 uid="uid://bvea0bsr28d1p"]
 
-[node name="MainMenu" type="Control"]
+[ext_resource type="Texture2D" uid="uid://ctiw8qc1wk07j" path="res://addons/COVER IMAGE 1.png" id="1_6obsq"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_y4wvn"]
+
+[node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchor_right = 0.997
 anchor_bottom = 1.0
+offset_right = 0.455933
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y4wvn")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578.5, 324.25)
+scale = Vector2(1.12988, 0.632324)
+texture = ExtResource("1_6obsq")
 
-[node name="Control" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 15.0
-offset_top = 11.0
-offset_right = 873.0
-offset_bottom = 384.0
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.061
+offset_left = 434.0
+offset_top = 379.0
+offset_right = 723.785
+offset_bottom = 482.289
 
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 92.0
-offset_bottom = 23.0
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "START GAME"
 
-[node name="StartGameButton" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "HOW TO PLAY"
 
-[node name="TutorialButton" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "QUIT"
