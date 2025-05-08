@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c012k04ytd21x"]
+
+[ext_resource type="AudioStream" uid="uid://dh5a14gam6x7i" path="res://victorymusic.mp3" id="1_6wl14"]
+
+[node name="victorymusic" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_6wl14")
+volume_db = 15.0

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr5cxqhai0ekh"]
+
+[ext_resource type="AudioStream" uid="uid://bi7r7hen2qbht" path="res://backgroundMusic.mp3" id="1_sbqqu"]
+
+[node name="backgroundmusic" type="AudioStreamPlayer3D"]
+transform = Transform3D(-0.999658, 0, -0.026177, 0, 1, 0, 0.026177, 0, -0.999658, -1.62739, 0.0857142, -31.8245)
+stream = ExtResource("1_sbqqu")
+max_distance = 1e+11
+panning_strength = 0.0

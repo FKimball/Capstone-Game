@@ -1,11 +1,13 @@
-[gd_scene load_steps=82 format=3 uid="uid://5gv8v04hl4oe"]
+[gd_scene load_steps=83 format=3 uid="uid://5gv8v04hl4oe"]
 
 [ext_resource type="PackedScene" uid="uid://cyt3j5ntkumvd" path="res://3dPlayer.tscn" id="1_f0b52"]
 [ext_resource type="Script" path="res://lab_4.gd" id="1_oqxjr"]
 [ext_resource type="PackedScene" uid="uid://lmq3sa2lp6de" path="res://item.tscn" id="2_2yveb"]
 [ext_resource type="PackedScene" uid="uid://dsjpcn08raqtk" path="res://npc.tscn" id="2_gywbc"]
+[ext_resource type="PackedScene" uid="uid://dr5cxqhai0ekh" path="res://backgroundmusic.tscn" id="3_uxv03"]
 [ext_resource type="Script" path="res://dialogue.gd" id="3_w686m"]
 [ext_resource type="Texture2D" uid="uid://snfejdvvwjva" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/tiny_treats_grass_texture.png" id="4_8asav"]
+[ext_resource type="PackedScene" uid="uid://c012k04ytd21x" path="res://victorymusic.tscn" id="4_ekyd3"]
 [ext_resource type="Texture2D" uid="uid://ifs6ismd4tg1" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/sand-texture.jpg" id="5_gtsjh"]
 [ext_resource type="Texture2D" uid="uid://cgedfx2qvntb5" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/tiny_treats_grass_texture.png" id="5_rijxs"]
 [ext_resource type="ArrayMesh" uid="uid://c4wglsepvjte7" path="res://addons/kaykit_dungeon_remastered/Assets/obj/coin_stack_medium.obj" id="7_upxjp"]
@@ -44,7 +46,6 @@
 [ext_resource type="PackedScene" uid="uid://dodlktuitm1gf" path="res://wall_broken.tscn" id="42_awhug"]
 [ext_resource type="ArrayMesh" uid="uid://bx11cifgbubmm" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/grass_A.obj" id="43_81cs3"]
 [ext_resource type="PackedScene" uid="uid://q57x400r3hbx" path="res://stairs_wide.tscn" id="43_amfnx"]
-[ext_resource type="AudioStream" uid="uid://bi7r7hen2qbht" path="res://backgroundMusic.mp3" id="45_oum3o"]
 
 [sub_resource type="Resource" id="Resource_khu1u"]
 script = ExtResource("3_w686m")
@@ -165,6 +166,12 @@ script = ExtResource("1_oqxjr")
 
 [node name="Player" parent="." instance=ExtResource("1_f0b52")]
 transform = Transform3D(-0.999657, 0, 0.026177, 0, 1, 0, -0.026177, 0, -0.999657, -0.793765, -0.0857142, -4.41517)
+
+[node name="backgroundmusic" parent="Player" instance=ExtResource("3_uxv03")]
+
+[node name="victorymusic" parent="Player" instance=ExtResource("4_ekyd3")]
+transform = Transform3D(-0.999658, 0, -0.026177, 0, 1, 0, 0.026177, 0, -0.999658, -0.909069, 0.0857142, -4.39288)
+panning_strength = 0.0
 
 [node name="NPC" parent="." node_paths=PackedStringArray("quest_item") instance=ExtResource("2_gywbc")]
 transform = Transform3D(0.730174, 0, 0.683261, 0, 1, 0, -0.683261, 0, 0.730174, 0.806032, -0.162441, 3.37546)
@@ -1440,8 +1447,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.70527, 0, -27.7127)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="worldboundary/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20227, 0.924759, -3.37451)
 shape = SubResource("BoxShape3D_eeggk")
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("45_oum3o")
 
 [connection signal="body_entered" from="Desert/ChestGold/Area3D" to="Desert/ChestGold" method="_on_area_3d_body_entered"]
