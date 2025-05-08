@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceiejunj246af"]
+
+[ext_resource type="Script" path="res://howto.gd" id="1_bra1h"]
+[ext_resource type="Texture2D" uid="uid://dvemobcr5glb5" path="res://addons/tiny_treats_pretty_park_set/Assets/cover image.png" id="1_kbo4l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -88.0
+offset_right = -125.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bra1h")
+
+[node name="CoverImage" type="Sprite2D" parent="."]
+position = Vector2(706, 400)
+texture = ExtResource("1_kbo4l")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 249.0
+offset_right = 1046.0
+offset_bottom = 581.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 45
+text = "HOW TO PLAY
+
+WASD/Arrow Keys - Move
+Mouse - Camera control 
+E - Talk"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 552.0
+offset_top = 616.0
+offset_right = 776.0
+offset_bottom = 692.0
+theme_override_font_sizes/font_size = 40
+text = "Back"
