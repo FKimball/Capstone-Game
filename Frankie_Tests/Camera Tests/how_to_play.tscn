@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg0nb5g6weadk"]
+
+[ext_resource type="Texture2D" uid="uid://bsiqkt3m8j7cm" path="res://addons/tiny_treats_pretty_park_set/Assets/gltf/HowToPlayInstructions.png" id="1_au5ef"]
+[ext_resource type="Script" path="res://how_to_play.gd" id="1_wyeeg"]
+
+[node name="HowToPlay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wyeeg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.25, 325.25)
+scale = Vector2(0.749674, 0.628418)
+texture = ExtResource("1_au5ef")
+
+[node name="MarginContainer" type="MarginContainer" parent="Sprite2D"]
+offset_left = -154.0
+offset_top = -2.0
+offset_right = 133.0
+offset_bottom = 60.0
+
+[node name="Button" type="Button" parent="Sprite2D/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "GO BACK"
