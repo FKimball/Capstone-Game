@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://3oy1gxmfqhwv"]
+
+[node name="AudioManager" type="Node"]
+
+[node name="ClickPlayer" type="AudioStreamPlayer3D" parent="."]
+
+[node name="QuestPlayer" type="AudioStreamPlayer3D" parent="."]
+
+[node name="AmbientPlayer" type="AudioStreamPlayer3D" parent="."]

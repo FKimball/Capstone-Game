@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvea0bsr28d1p"]
+[gd_scene load_steps=4 format=3 uid="uid://bvea0bsr28d1p"]
 
 [ext_resource type="Texture2D" uid="uid://ctiw8qc1wk07j" path="res://addons/COVER IMAGE 1.png" id="1_6obsq"]
 [ext_resource type="Script" path="res://main_menu.gd" id="1_y4wvn"]
+[ext_resource type="PackedScene" uid="uid://bm0bh7cidnphb" path="res://audiobutton.tscn" id="3_hsp2t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -45,3 +46,5 @@ text = "HOW TO PLAY"
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "QUIT"
+
+[node name="BUTTON" parent="." instance=ExtResource("3_hsp2t")]

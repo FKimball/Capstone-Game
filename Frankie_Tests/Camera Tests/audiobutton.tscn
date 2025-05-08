@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm0bh7cidnphb"]
+
+[ext_resource type="AudioStream" uid="uid://c6n0bchpajc7i" path="res://buttonsAudio.ogg" id="1_aolep"]
+
+[node name="BUTTON" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_aolep")
+volume_db = 24.0
