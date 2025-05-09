@@ -13,4 +13,10 @@ func _on_body_entered(body):
 		print("Picked up:", item_name)
 		emit_signal("item_collected")
 		emit_signal("quest_completed")
+		if not CoinPickup.playing:
+			CoinPickup.play()
+		else:
+			CoinPickup.stop()
+			CoinPickup.play()
 		queue_free()
+		

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Audiobutton="*res://audiobutton.tscn"
 Backgroundmusic="*res://backgroundmusic.tscn"
 Victorymusic="*res://victorymusic.tscn"
+CoinPickup="*res://coinPickup.tscn"
 
 [filesystem]
 

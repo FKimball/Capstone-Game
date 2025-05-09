@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyt3j5ntkumvd"]
+[gd_scene load_steps=5 format=3 uid="uid://cyt3j5ntkumvd"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_eib4h"]
+[ext_resource type="PackedScene" uid="uid://csb02jmfddjyq" path="res://PlayerModel.tscn" id="2_45vq2"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_rwkls"]
-radius = 0.50783
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kfpe1"]
+radius = 1.4595
+height = 3.87783
 
 [sub_resource type="Environment" id="Environment_xwa1b"]
 adjustment_enabled = true
@@ -11,21 +13,12 @@ adjustment_enabled = true
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_eib4h")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-transform = Transform3D(0.877322, 0, 0.479902, 0, 1, 0, -0.479902, 0, 0.877322, 0, 0, 0)
-radius = 0.375242
-
-[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGSphere3D"]
-transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, -0.138891, -0.169548, 0.0214993)
-radius = 0.295552
-
-[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGSphere3D"]
-transform = Transform3D(0.344001, 0, -0.362856, 0, 1, 0, 0.362856, 0, 0.344001, 0.0688085, -0.174445, 0.110302)
-radius = 0.295552
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.999868, 0.00214648, 0.0160912, -0.00214675, 0.999998, 0, -0.0160912, -3.45439e-05, 0.999871, 0, 0, 0)
-shape = SubResource("SphereShape3D_rwkls")
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.473363, 0)
+shape = SubResource("CapsuleShape3D_kfpe1")
+
+[node name="Mage" parent="." instance=ExtResource("2_45vq2")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

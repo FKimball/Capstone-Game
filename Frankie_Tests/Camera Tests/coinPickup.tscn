@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhlbupecbkta3"]
+
+[ext_resource type="AudioStream" uid="uid://6dlt8rfs5u22" path="res://coinPick.mp3" id="1_0bbqj"]
+
+[node name="coinPickup" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_0bbqj")
+attenuation_model = 3
+volume_db = -10.0
+max_distance = 1e+11
+panning_strength = 0.0
